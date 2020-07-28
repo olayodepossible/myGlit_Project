@@ -32,6 +32,7 @@
                 margin: 10px;
                 padding: 5px 0 5px 0;
             }
+
             #candidate-dashboard header{
                 position: fixed;
                 top: 0;
@@ -57,6 +58,14 @@
             }
             #candidate-dashboard .top_nav{
                 background-color: #212D56;
+                height: 100%;
+            }
+
+            #candidate-dashboard .top_nav-1, #candidate-dashboard .top_nav-2{
+                /*height: 50vh;*/
+                font-size: 1.8rem;
+                padding: 20px;
+
             }
             #candidate-dashboard .btn-line{
                 width: 15px;
@@ -310,11 +319,12 @@
                     height: 40px;
                     left: 0;
                 }
-                #candidate-dashboard .top_nav-1, .top_nav-2{
+                #candidate-dashboard .top_nav-1,  #candidate-dashboard .top_nav-2{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding-top: 6px;
+                    padding: 0;
+                    font-size: 0;
                 }
                 #candidate-dashboard .top_nav-1{
                     margin: 5px 0 0 20px;
