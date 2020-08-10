@@ -37283,7 +37283,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./menu */ "./resources/js/menu.js");
 
-__webpack_require__(/*! ./aside_bar */ "./resources/js/aside_bar.js"); // window.Vue = require('vue');
+__webpack_require__(/*! ./aside_bar */ "./resources/js/aside_bar.js");
+
+__webpack_require__(/*! ./progress */ "./resources/js/progress.js"); // window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -37443,6 +37445,36 @@ function toggleMenu() {
         showMenu = false;
     }
 }*/
+
+/***/ }),
+
+/***/ "./resources/js/progress.js":
+/*!**********************************!*\
+  !*** ./resources/js/progress.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $(".progress").each(function () {
+    var value = $(this).attr("data-value");
+    var left = $(this).find(".progress-left .progress-bar");
+    var right = $(this).find(".progress-right .progress-bar");
+
+    if (value > 0) {
+      if (value <= 50) {
+        right.css("transform", "rotate(" + percentageToDegrees(value) + "deg)");
+      } else {
+        right.css("transform", "rotate(180deg)");
+        left.css("transform", "rotate(" + percentageToDegrees(value - 50) + "deg)");
+      }
+    }
+  });
+
+  function percentageToDegrees(percentage) {
+    return percentage / 100 * 360;
+  }
+});
 
 /***/ }),
 

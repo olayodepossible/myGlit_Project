@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/sendMail', 'MailController@sendMail');
 Route::get('/dashboard/candidate', 'CandidateDashboardController@showDashboard');
+Route::get('/company/inbox', 'CandidateDashboardController@showDashboard');
 
 Auth::routes();
 
