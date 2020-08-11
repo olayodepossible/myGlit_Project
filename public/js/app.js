@@ -37281,11 +37281,7 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./menu */ "./resources/js/menu.js");
-
-__webpack_require__(/*! ./aside_bar */ "./resources/js/aside_bar.js");
-
-__webpack_require__(/*! ./progress */ "./resources/js/progress.js"); // window.Vue = require('vue');
+__webpack_require__(/*! ./menu */ "./resources/js/menu.js"); // window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -37307,29 +37303,6 @@ __webpack_require__(/*! ./progress */ "./resources/js/progress.js"); // window.V
 /*const app = new Vue({
     el: '#candidate-dashboard',
 });*/
-
-/***/ }),
-
-/***/ "./resources/js/aside_bar.js":
-/*!***********************************!*\
-  !*** ./resources/js/aside_bar.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$(document).ready(function () {
-  $(".svg_menu").click(function () {
-    // show hide paragraph on button click
-    $(".left-side-bar").toggle("slow", function () {
-      // check paragraph once toggle effect is completed
-      if ($("p").is(":visible")) {
-        console.log("The paragraph  is visible.");
-      } else {
-        console.log("The paragraph  is hidden.");
-      }
-    });
-  });
-});
 
 /***/ }),
 
@@ -37385,23 +37358,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// Select DOM Item
-
-/*const menuBtn = document.querySelector(".menu-btn");
-const top_nav = document.querySelector(".top_nav");
-const menuNav1 = document.querySelector(".top_nav-1");
-const menuNav2 = document.querySelector(".top_nav-2");
-const navItems1 = document.querySelectorAll(".top_nav_item1");
-const navItems2 = document.querySelectorAll(".top_nav_item2");
-const menuBtnLine = document.querySelectorAll(".btn-line");*/
 //set initial State of menu
 var showMenu = false;
-var x = $('.btn-line').length;
+var showDropdown = false;
 $(document).ready(function () {
+  /*  Candidate Dashboard Begins */
   $(".menu-btn").click(function () {
     if (!showMenu) {
-      $('.menuBtn').addClass("close");
-      $('.top_nav').addClass("show").fadeIn("slow");
+      $('.menu-btn').addClass("close").css("transform", "rotate(180deg)");
       $(".btn-line:nth-of-type(1)").css("transform", "rotate(45deg) translate(4px, 3px)");
       $(".btn-line:nth-of-type(2)").css("opacity", "0");
       $(".btn-line:nth-of-type(3)").css("transform", "rotate(-45deg) translate(3px, -2px)");
@@ -37409,71 +37373,61 @@ $(document).ready(function () {
 
       showMenu = true;
     } else {
-      $('.menuBtn').removeClass("close");
-      $('.top_nav').removeClass("show").fadeOut("slow");
+      $('.menu-btn').removeClass("close");
       $(".btn-line:nth-of-type(1)").css("transform", "rotate(0deg) translate(0)");
       $(".btn-line:nth-of-type(2)").css("opacity", "1");
       $(".btn-line:nth-of-type(3)").css("transform", "rotate(0deg) translate(0)");
-      $(".btn-line").css("background-color", "#444"); //Set menu state
+      $(".btn-line").css("background-color", "#333"); //Set menu state
 
       showMenu = false;
     }
-  });
-});
-/*
-menuBtn.addEventListener("click", toggleMenu);
 
-function toggleMenu() {
+    $('.top_nav').toggle("slow");
+  });
+  $(".svg_menu").click(function () {
+    $(".left-side-bar").toggle("slow");
+  });
+  /*  Candidate Dashboard Ends */
+
+  /*  Company Inbox main Begins */
+
+  $(".menu-btn1").click(function () {
     if (!showMenu) {
-        // menuBtnLine.style.backgroundColor = '#fff'
-        menuBtn.classList.add("close");
-       top_nav.classList.add("show");
-        for (let i = 0; i < menuBtnLine.length; i++) {
-            menuBtnLine[i].style.backgroundColor = "#fff";
-        }
+      $('.menu-btn1').addClass("close");
+      $(".btnLine:nth-of-type(1)").css("transform", "rotate(45deg) translate(9px, 6px)");
+      $(".btnLine:nth-of-type(2)").css("opacity", 0);
+      $(".btnLine:nth-of-type(3)").css("transform", "rotate(-45deg) translate(5px, -2px)"); //Set menu state
 
-        //Set menu state
-        showMenu = true;
+      showMenu = true;
     } else {
-        menuBtn.classList.remove("close");
-        top_nav.classList.remove("show");
-        for (let i = 0; i < menuBtnLine.length; i++) {
-            menuBtnLine[i].style.backgroundColor = "#444";
-        }
+      $('.menu-btn1').removeClass("close");
+      $(".btnLine:nth-of-type(1)").css("transform", "rotate(0deg) translate(0)");
+      $(".btnLine:nth-of-type(2)").css("opacity", 1);
+      $(".btnLine:nth-of-type(3)").css("transform", "rotate(0deg) translate(0)"); //Set menu state
 
-        //Set menu state
-        showMenu = false;
+      showMenu = false;
     }
-}*/
 
-/***/ }),
-
-/***/ "./resources/js/progress.js":
-/*!**********************************!*\
-  !*** ./resources/js/progress.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$(function () {
-  $(".progress").each(function () {
-    var value = $(this).attr("data-value");
-    var left = $(this).find(".progress-left .progress-bar");
-    var right = $(this).find(".progress-right .progress-bar");
-
-    if (value > 0) {
-      if (value <= 50) {
-        right.css("transform", "rotate(" + percentageToDegrees(value) + "deg)");
-      } else {
-        right.css("transform", "rotate(180deg)");
-        left.css("transform", "rotate(" + percentageToDegrees(value - 50) + "deg)");
-      }
-    }
+    $('.left-sideBar').toggle("slow");
   });
+  $('.content-wrapper').on('click', function (e) {
+    if (!showDropdown) {
+      $(this).find('.dropdown').css("background-color", "#28C882");
+      $(this).find(".dropbtn").css("color", "#fff");
+      $(this).find(".hiring").css("color", "#333");
+      showDropdown = true;
+    } else {
+      $(this).find('.dropdown').css("background-color", "#fff");
+      $(this).find('.dropbtn').css("color", "#333");
+      $(this).find(".hiring").css("color", "#fff");
+      showDropdown = false;
+    }
 
-  function percentageToDegrees(percentage) {
-    return percentage / 100 * 360;
-  }
+    e.stopPropagation();
+    $(this).find('.dropdown-contents').toggle("slow");
+    console.log(e);
+  });
+  /*  Company Inbox main Ends */
 });
 
 /***/ }),

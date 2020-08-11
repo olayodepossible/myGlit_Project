@@ -1,23 +1,14 @@
-// Select DOM Item
-
-/*const menuBtn = document.querySelector(".menu-btn");
-const top_nav = document.querySelector(".top_nav");
-const menuNav1 = document.querySelector(".top_nav-1");
-const menuNav2 = document.querySelector(".top_nav-2");
-const navItems1 = document.querySelectorAll(".top_nav_item1");
-const navItems2 = document.querySelectorAll(".top_nav_item2");
-const menuBtnLine = document.querySelectorAll(".btn-line");*/
-
 //set initial State of menu
 
 let showMenu = false;
-let x = $('.btn-line').length;
+let showDropdown = false;
 
 $(document).ready(function(){
+
+    /*  Candidate Dashboard Begins */
     $(".menu-btn").click(function(){
         if (!showMenu) {
-            $('.menuBtn').addClass("close");
-            $('.top_nav').addClass("show").fadeIn("slow");
+            $('.menu-btn').addClass("close").css( "transform", "rotate(180deg)");
             $(".btn-line:nth-of-type(1)").css("transform", "rotate(45deg) translate(4px, 3px)");
             $(".btn-line:nth-of-type(2)").css("opacity", "0");
             $(".btn-line:nth-of-type(3)").css("transform", "rotate(-45deg) translate(3px, -2px)");
@@ -27,45 +18,67 @@ $(document).ready(function(){
             //Set menu state
             showMenu = true;
         } else {
-            $('.menuBtn').removeClass("close");
-            $('.top_nav').removeClass("show").fadeOut("slow");
+            $('.menu-btn').removeClass("close");
             $(".btn-line:nth-of-type(1)").css("transform", "rotate(0deg) translate(0)");
             $(".btn-line:nth-of-type(2)").css("opacity", "1");
             $(".btn-line:nth-of-type(3)").css("transform", "rotate(0deg) translate(0)");
-            $(".btn-line").css("background-color", "#444");
+            $(".btn-line").css("background-color", "#333");
 
             //Set menu state
             showMenu = false;
         }
+
+        $('.top_nav').toggle("slow");
     });
+
+    $(".svg_menu").click(function(){
+        $(".left-side-bar").toggle("slow");
+    });
+    /*  Candidate Dashboard Ends */
+
+
+    /*  Company Inbox main Begins */
+    $(".menu-btn1").click(function(){
+        if (!showMenu) {
+            $('.menu-btn1').addClass("close")
+            $(".btnLine:nth-of-type(1)").css("transform", "rotate(45deg) translate(9px, 6px)");
+            $(".btnLine:nth-of-type(2)").css("opacity", 0);
+            $(".btnLine:nth-of-type(3)").css("transform", "rotate(-45deg) translate(5px, -2px)");
+
+            //Set menu state
+            showMenu = true;
+        } else {
+            $('.menu-btn1').removeClass("close");
+            $(".btnLine:nth-of-type(1)").css("transform", "rotate(0deg) translate(0)");
+            $(".btnLine:nth-of-type(2)").css("opacity", 1);
+            $(".btnLine:nth-of-type(3)").css("transform", "rotate(0deg) translate(0)");
+
+            //Set menu state
+            showMenu = false;
+        }
+        $('.left-sideBar').toggle("slow");
+    });
+
+
+    $('.content-wrapper').on('click', function(e){
+        if(!showDropdown){
+            $(this).find('.dropdown').css("background-color", "#28C882");
+            $(this).find(".dropbtn").css("color", "#fff");
+            $(this).find(".hiring").css("color", "#333");
+            showDropdown = true;
+        }
+        else {
+            $(this).find('.dropdown').css("background-color", "#fff");
+            $(this).find('.dropbtn').css("color", "#333");
+            $(this).find(".hiring").css("color", "#fff");
+            showDropdown = false;
+        }
+        e.stopPropagation();
+        $(this).find('.dropdown-contents').toggle("slow");
+        console.log(e);
+    });
+    /*  Company Inbox main Ends */
 });
 
 
-
-
-/*
-menuBtn.addEventListener("click", toggleMenu);
-
-function toggleMenu() {
-    if (!showMenu) {
-        // menuBtnLine.style.backgroundColor = '#fff'
-        menuBtn.classList.add("close");
-       top_nav.classList.add("show");
-        for (let i = 0; i < menuBtnLine.length; i++) {
-            menuBtnLine[i].style.backgroundColor = "#fff";
-        }
-
-        //Set menu state
-        showMenu = true;
-    } else {
-        menuBtn.classList.remove("close");
-        top_nav.classList.remove("show");
-        for (let i = 0; i < menuBtnLine.length; i++) {
-            menuBtnLine[i].style.backgroundColor = "#444";
-        }
-
-        //Set menu state
-        showMenu = false;
-    }
-}*/
 

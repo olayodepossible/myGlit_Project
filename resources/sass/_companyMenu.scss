@@ -1,0 +1,27 @@
+
+//Menu Button
+.bell{
+    position: absolute;
+    z-index: 3;
+    right: 15px;
+    top: 11px;
+    cursor: pointer;
+}
+
+.menu-btn1 {
+   position: absolute;
+    z-index: 5;
+    left: 12px;
+    top: 12px;
+    cursor: pointer;
+
+    //@include easeOut;
+
+    .btnLine {
+        width: 22px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #333333;
+    }
+}
+
