@@ -37360,7 +37360,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 //set initial State of menu
 var showMenu = false;
-var showDropdown = false;
 $(document).ready(function () {
   /*  Candidate Dashboard Begins */
   $(".menu-btn").click(function () {
@@ -37411,23 +37410,45 @@ $(document).ready(function () {
     $('.left-sideBar').toggle("slow");
   });
   $('.content-wrapper').on('click', function (e) {
-    if (!showDropdown) {
-      $(this).find('.dropdown').css("background-color", "#28C882");
-      $(this).find(".dropbtn").css("color", "#fff");
-      $(this).find(".hiring").css("color", "#333");
-      showDropdown = true;
-    } else {
-      $(this).find('.dropdown').css("background-color", "#fff");
-      $(this).find('.dropbtn').css("color", "#333");
-      $(this).find(".hiring").css("color", "#fff");
-      showDropdown = false;
-    }
+    e.preventDefault();
 
-    e.stopPropagation();
-    $(this).find('.dropdown-contents').toggle("slow");
-    console.log(e);
+    if ($(e.target).hasClass('arrowD')) {
+      if ($(this).find('.icons').hasClass('fill')) {
+        $(this).find('.dropdown').css("background-color", "#fff");
+        $(this).find('.dropbtn').css("color", "#333");
+        $(this).find(".icons").removeClass("fill");
+        $(this).find(".hiring").css("color", "#fff");
+        $(this).find('.dropdown-contents').slideUp(500);
+        console.log("slide up this active drop down cos it is open already");
+      } else {
+        $(".icons").removeClass("fill");
+        $(".hiring").css("color", "#fff");
+        $('.dropdown').css("background-color", "#fff");
+        $('.dropbtn').css("color", "#333");
+        $('.dropdown-contents').slideUp(500);
+        $(this).find('.dropdown').css("background-color", "#28C882");
+        $(this).find(".dropbtn").css("color", "#fff");
+        $(this).find(".icons").addClass("fill");
+        $(this).find(".hiring").css("color", "#333");
+        $(this).find('.dropdown-contents').slideDown(1000);
+        console.log("slide up all active drop down and open this current div");
+      }
+
+      e.stopPropagation();
+    }
   });
   /*  Company Inbox main Ends */
+  //----- Open model CREATE -----//
+
+  $('.btnDiv').click(function (e) {
+    $('#btn-save').val("add");
+    $('#modalForm').trigger("reset");
+    $('#formModal').modal('show');
+  });
+  $('.closeBtn').click(function () {
+    $('#modalForm').trigger("reset");
+    $('#formModal').modal('hide');
+  }); //----- End model CREATE -----//
 });
 
 /***/ }),

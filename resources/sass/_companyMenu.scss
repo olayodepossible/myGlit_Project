@@ -8,14 +8,23 @@
     cursor: pointer;
 }
 
+/*#company-inbox .dropdown-contents{
+    display: none;
+
+    &.show{
+        display: block;
+    }
+}*/
+.fill svg{
+    fill: #fff;
+}
+
 .menu-btn1 {
    position: absolute;
     z-index: 5;
     left: 12px;
     top: 12px;
     cursor: pointer;
-
-    //@include easeOut;
 
     .btnLine {
         width: 22px;
