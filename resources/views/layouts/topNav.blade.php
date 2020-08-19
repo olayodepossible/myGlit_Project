@@ -282,18 +282,9 @@
                 </div>
             </nav>
 
-            <nav class="bottom_nav d-flex">
-                <div class="bottom-header-img">
-                    <a class="navbar-brand" href="#">
-                        <img src="http://freeversion.myglit.com/images/myglit-banner.png" class="img-fluid" alt="" width="70">
-                    </a>
-                </div>
+            @component('layouts.components.bottomNav', ['text' => "Employer Zone", 'imgSrc' => "http://freeversion.myglit.com/images/myglit-banner.png"])
+            @endcomponent
 
-                <div class="bottom-header-btn">
-                    <a href="#"> Employer Zone</a>
-                </div>
-
-            </nav>
         </header>
 
         <main class="main">

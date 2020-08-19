@@ -150,6 +150,16 @@
             #card1 .main-content div{
                 border-bottom: 0;
             }
+            #candidate-dashboard .main-content-card1{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #candidate-dashboard .input2{
+                border: 0;
+                border-left: 1px solid #ccc;
+                padding-left: 20px;
+            }
             #candidate-dashboard .main-content-card1 h6{
                 font-size: 10px;
                 width: 100%;
@@ -495,7 +505,6 @@
                     width: 100%;
                     margin: 0 0 50px 0;
                     padding: 0;
-
                 }
 
                 #candidate-dashboard .menu-btn, .svg_menu{
@@ -951,20 +960,22 @@
                 </aside>
 
                 <div class="main-content">
-                    <div class="cards d-flex justify-content-around">
-                        {{--<form>
-                            <div>
-                                <div  class="main-content-card1"> <input placeholder="Job Title, Skills"></div>
-                                <div class="main-content-card1" style="border-left: 1px solid #DDDDDD;"> <input placeholder="Location(City, State, Country)"> </div>
-                                <div class="main-content-card1">
-                                    <a  href="#">
-                                        <button>Find Jobs</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </form>--}}
-                        <div  class="main-content-card1"><h6>Job Title, Skills</h6></div>
-                        <div class="main-content-card1" style="border-left: 1px solid #DDDDDD;"> <h6>Location(City, State, Country)</h6></div>
+                    <div class="cards form-card d-flex justify-content-around">
+                        <div class=" form-card1 main-content-card1">
+                            <input style="border: 0;"
+                                type="text"
+                                name="job_title"
+                                placeholder="Job Title, Skills"
+                            />
+                        </div>
+                        <div class=" form-card1 main-content-card1">
+                            <input
+                                type="text"
+                                name="location"
+                                class="input2"
+                                placeholder="Location(City, State, Country)"
+                            />
+                        </div>
                         <div class="main-content-card1">
                             <a  href="#">
                                 <button>Find Jobs</button>

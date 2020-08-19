@@ -65,6 +65,9 @@
 @endsection
 
 @section('content')
+
+
+
     <div id="signUp1" class="container">
         <div class="row justify-content-center ">
             <div class="wrapper col-md-8">

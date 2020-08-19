@@ -21,6 +21,7 @@ Route::view('/signup1','signUp.signup1');
 Route::view('/signup2','signUp.signup2');
 
 Route::get('/sendMail', 'MailController@sendMail');
+Route::get('/jobs', 'JobController@showJobs');
 Route::get('/dashboard/candidate', 'CandidateDashboardController@showDashboard');
 Route::get('/company/inbox', 'CompanyInboxController@showCompanyInbox');
 

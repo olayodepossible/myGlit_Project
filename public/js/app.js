@@ -37449,6 +37449,32 @@ $(document).ready(function () {
     $('#modalForm').trigger("reset");
     $('#formModal').modal('hide');
   }); //----- End model CREATE -----//
+
+  /*  Job Page Begins */
+
+  $(".menu-btn2").click(function () {
+    if (!showMenu) {
+      $('.menu-btn2').addClass("close").css("transform", "rotate(180deg)");
+      $(".btnLine2:nth-of-type(1)").css("transform", "rotate(45deg) translate(6px, 7px)");
+      $(".btnLine2:nth-of-type(2)").css("opacity", "0");
+      $(".btnLine2:nth-of-type(3)").css("transform", "rotate(-45deg) translate(4px, -4px)"); //Set menu state
+
+      showMenu = true;
+    } else {
+      $('.menu-btn2').removeClass("close");
+      $(".btnLine2:nth-of-type(1)").css("transform", "rotate(0deg) translate(0)");
+      $(".btnLine2:nth-of-type(2)").css("opacity", "1");
+      $(".btnLine2:nth-of-type(3)").css("transform", "rotate(0deg) translate(0)"); //Set menu state
+
+      showMenu = false;
+    }
+
+    $('.left-sideBar').toggle("slow");
+  });
+  $(".svg_menu1").click(function () {
+    $(".top_nav").toggle("slow");
+  });
+  /*  Job Page Ends */
 });
 
 /***/ }),
