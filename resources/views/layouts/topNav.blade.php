@@ -30,7 +30,7 @@
             color: #333333;
         }
 
-        #candidate-dashboard header{
+        #dashboard-layout header{
             position: fixed;
             top: 0;
             width: 100%;
@@ -40,13 +40,13 @@
             z-index: 3;
         }
 
-        #candidate-dashboard a{
+        #dashboard-layout a{
             text-decoration: none;
             font-size: 12px;
             line-height: 19px;
         }
 
-        #candidate-dashboard .bottom-header-btn a{
+        #dashboard-layout .bottom-header-btn a{
             background-color: #E33D47;
             color: #ffffff;
             border-radius: 5px;
@@ -54,33 +54,33 @@
             text-decoration: none;
             font-size: 10px;
         }
-        #candidate-dashboard .bottom-header-btn{
+        #dashboard-layout .bottom-header-btn{
             margin-top: 7px;
             padding-left: 90px;
         }
-        #candidate-dashboard ul, p{
+        #dashboard-layout ul, p{
             margin: 0;
             padding: 0;
             list-style: none;
         }
-        #candidate-dashboard .top_nav{
+        #dashboard-layout .top_nav{
             background-color: #212D56;
             height: 100%;
         }
 
-        #candidate-dashboard .top_nav-1, #candidate-dashboard .top_nav-2{
+        #dashboard-layout .top_nav-1, #dashboard-layout .top_nav-2{
             /*height: 50vh;*/
             font-size: 1.8rem;
             padding: 20px;
 
         }
-        #candidate-dashboard .btn-line{
+        #dashboard-layout .btn-line{
             width: 15px;
             height: 2px;
             padding: 0;
             margin: 2px;
         }
-        #candidate-dashboard .items a{
+        #dashboard-layout .items a{
             color: #ffffff;
             text-transform: uppercase;
         }
@@ -91,23 +91,23 @@
                 overflow-x: hidden;
             }
 
-            #candidate-dashboard{
+            #dashboard-layout{
                 padding: 0;
                 margin: 0;
             }
-            #candidate-dashboard a{
+            #dashboard-layout a{
                 font-size: 11px;
                 margin: 0;
             }
-            #candidate-dashboard .menu-btn{
+            #dashboard-layout .menu-btn{
                 display: none;
             }
-            #candidate-dashboard header{
+            #dashboard-layout header{
                 width: 100%;
                 padding: 0;
                 margin: 0;
             }
-            #candidate-dashboard .top_nav{
+            #dashboard-layout .top_nav{
                 display: flex;
                 position: static;
                 visibility: visible;
@@ -117,38 +117,38 @@
                 left: 0;
             }
 
-            #candidate-dashboard .top_nav-1,  #candidate-dashboard .top_nav-2{
+            #dashboard-layout .top_nav-1,  #dashboard-layout .top_nav-2{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 0;
                 font-size: 0;
             }
-            #candidate-dashboard .top_nav-1{
+            #dashboard-layout .top_nav-1{
                 margin: 5px 0 0 10px;
                 padding-top: 5px;
 
             }
-            #candidate-dashboard .top_nav-2{
+            #dashboard-layout .top_nav-2{
                 margin: 9px 20px 0 0;
             }
 
-            #candidate-dashboard .top_nav_item1,.top_nav_item2{
+            #dashboard-layout .top_nav_item1,.top_nav_item2{
                 padding: 0 5px 0 5px;
                 font-size: 14px;
             }
 
-            #candidate-dashboard .bottom_nav{
+            #dashboard-layout .bottom_nav{
                 justify-content: space-between;
                 padding: 15px;
             }
 
-            #candidate-dashboard .bottom-header-btn a{
+            #dashboard-layout .bottom-header-btn a{
                 padding: 10px;
                 font-size: 14px;
             }
 
-            #candidate-dashboard .bottom-header-img img{
+            #dashboard-layout .bottom-header-img img{
                 width: 100px;
             }
 
@@ -156,22 +156,22 @@
 
         /* LARGE SCREEN */
         @media (min-width: 769px) {
-            #candidate-dashboard{
+            #dashboard-layout{
                 padding: 0;
                 margin: 0;
             }
-            #candidate-dashboard header{
+            #dashboard-layout header{
                 width: 100%;
                 margin: 0 0 50px 0;
                 padding: 0;
 
             }
 
-            #candidate-dashboard .menu-btn{
+            #dashboard-layout .menu-btn{
                 display: none;
             }
 
-            #candidate-dashboard .top_nav{
+            #dashboard-layout .top_nav{
                 display: flex;
                 position: static;
                 visibility: visible;
@@ -180,37 +180,37 @@
                 height: 40px;
                 left: 0;
             }
-            #candidate-dashboard .top_nav-1,  #candidate-dashboard .top_nav-2{
+            #dashboard-layout .top_nav-1,  #candidate-dashboard .top_nav-2{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 0;
                 font-size: 0;
             }
-            #candidate-dashboard .top_nav-1{
+            #dashboard-layout .top_nav-1{
                 margin: 5px 0 0 20px;
 
             }
-            #candidate-dashboard .top_nav-2{
+            #dashboard-layout .top_nav-2{
                 margin: 9px 20px 0 0;
             }
 
-            #candidate-dashboard .top_nav_item1,.top_nav_item2{
+            #dashboard-layout .top_nav_item1,.top_nav_item2{
                 padding: 0 10px 0 10px;
                 font-size: 16px;
             }
 
-            #candidate-dashboard .bottom_nav{
+            #dashboard-layout .bottom_nav{
                 justify-content: space-between;
                 padding: 20px 30px 20px 30px;
             }
 
-            #candidate-dashboard .bottom-header-btn a{
+            #dashboard-layout .bottom-header-btn a{
                 padding: 10px;
                 font-size: 14px;
             }
 
-            #candidate-dashboard .bottom-header-img img{
+            #dashboard-layout .bottom-header-img img{
                 width: 100px;
             }
         }
@@ -218,7 +218,7 @@
     @yield('style')
 </head>
 <body>
-    <div id="candidate-dashboard">
+    <div id="dashboard-layout">
         <header>
             {{--   begins menu icon  --}}
             <div class="menu-btn">

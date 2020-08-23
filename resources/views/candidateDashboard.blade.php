@@ -124,7 +124,7 @@
             }
             #candidate-dashboard .cards_text{
                 height: 60px;
-                padding: 15px 0 0 15px;
+                padding: 15px 15px 0 15px;
             }
             #candidate-dashboard .profile-pic{
                 /*width: 100%;*/
@@ -903,7 +903,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="cards_text d-flex">
+                                <div class="cards_text d-flex justify-content-between">
                                     <div class="card_text-view">
                                         <a href="#" >
                                             <span >Who View Your Profile</span>

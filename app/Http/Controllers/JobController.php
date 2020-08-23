@@ -9,7 +9,7 @@ class JobController extends Controller
 {
     public function showJobs(){
 //        $data = Http::get('https://jsonblob.com/api/jsonBlob/cd2253ae-d62e-11ea-b785-537521d63268') -> json();
-        return view('jobs');
+        return view('jobsBoard');
 //         -> with(compact('data')
 
     }
