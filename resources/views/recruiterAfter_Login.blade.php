@@ -89,6 +89,9 @@
             padding-top: 5px;
 
         }
+        #recruiterAfterLogin .hiring-items{
+            display: flex;
+        }
         #recruiterAfterLogin .hiring .key-skill span{
             background-color: #ECF3FF;
             color: #2979FF;
@@ -137,9 +140,9 @@
         }
 
         #recruiterAfterLogin .user_profile .edit-wrapper {
-            padding-left: 70px;
+            margin-left: auto;
         }
-        #recruiterAfterLogin .user_profile .edit-wrapper span{
+        #recruiterAfterLogin .user_profile .edit-wrapper i{
             padding-right: 10px;
         }
         #recruiterAfterLogin .user-profile-list{
@@ -157,6 +160,8 @@
         #recruiterAfterLogin .user-profile-items p{
             font-size: 0.8rem;
         }
+
+
         /* Medium Screen*/
         @media screen and (min-width: 600px) and (max-width:768px){
             #recruiterAfterLogin .user-profile-cards{
@@ -309,6 +314,7 @@
         @media (min-width: 769px) {
             #recruiterAfterLogin .user_section{
                 display: grid;
+                position: relative;
                 grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
                 background-color: #FFF;
                 margin-bottom: 10px;
@@ -326,8 +332,8 @@
 
             #recruiterAfterLogin .user_section .edit-pen {
                 position: absolute;
-                right: 70px;
-                top: 180px;
+                right: 35px;
+                top: 20px;
             }
             #recruiterAfterLogin  .userImg img{
                 width: 100px;
@@ -484,10 +490,10 @@
 
             #recruiterAfterLogin .user_profile .edit-wrapper{
                 position: absolute;
-                right: 55px;
+                right: 40px;
             }
             #recruiterAfterLogin .user_profile .edit-wrapper span{
-                padding-right: 15px;
+                padding-right: 5px;
             }
 
             #recruiterAfterLogin .user-profile-list {
@@ -515,9 +521,7 @@
     <div id="recruiterAfterLogin">
         <section class="cards user_section">
             <div class="edit-pen">
-                <a href="#" type="button">
-                    <img src="/img/pencil_edit.png">
-                </a>
+                <i class="mdi mdi-pencil"></i>
             </div>
             <div class="user-profile-cards d-flex">
                 <div class="userImg">
@@ -635,15 +639,19 @@
             <h6 style="color: #000;">Active Jobs</h6>
             <ul class="rec-job-items">
                 <li>
-                    <h6 style="color: #333;">Fullstack Developer</h6>
+                    <h6 style="color: #333;">UI Developer</h6>
                     <small>Gratitude India</small>
-                    <div class="d-flex">
+                    <div class="d-flex ">
                         <div class="rec-job-icon">
-                            <img src="/img/work_icon.png">
+                            <span>
+                                <i class="mdi mdi-briefcase-outline"></i>
+                            </span>
                             <small>0-10Years</small>
                         </div>
                         <div class=" rec-job-icon">
-                            <img src="/img/loc_icon.png">
+                            <span>
+                   <i class="mdi mdi-map-marker-outline"></i>
+                </span>
                             <small> Mumbai, Maharashtra</small>
                         </div>
                         <div class=" rec-job-icon">
@@ -668,11 +676,15 @@
                     <small>Gratitude India</small>
                     <div class="d-flex ">
                         <div class="rec-job-icon">
-                            <img src="/img/work_icon.png">
+                            <span>
+                                <i class="mdi mdi-briefcase-outline"></i>
+                            </span>
                             <small>0-10Years</small>
                         </div>
                         <div class=" rec-job-icon">
-                            <img src="/img/loc_icon.png">
+                            <span>
+                   <i class="mdi mdi-map-marker-outline"></i>
+                </span>
                             <small> Mumbai, Maharashtra</small>
                         </div>
                         <div class=" rec-job-icon">
@@ -731,12 +743,8 @@
             <div class="d-flex">
                 <h6 style="color: #000;">Personal Details</h6>
                 <div class="edit-wrapper">
-                    <span class="edit">
-                        <img src="/img/pencil_edit.png">
-                    </span>
-                    <span class="arrowDown">
-                        <img src="/img/arrow.png">
-                    </span>
+                    <span class="edit"> <i class="mdi mdi-pencil "></i> </span>
+                    <span class="arrowDown"> <i class="mdi mdi-chevron-down "></i> </span>
                 </div>
             </div>
             <ul class="user-profile-list">

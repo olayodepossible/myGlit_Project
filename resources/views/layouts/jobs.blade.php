@@ -9,6 +9,7 @@
 
     <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css') }}" rel="stylesheet">
     <script src="{{ url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')}}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <title>
@@ -24,7 +25,7 @@
             font-family: 'Poppins', sans-serif;
             font-style: normal;
             color: #666;
-
+            background-color: #F2F2F2;
         }
         ul {
             list-style-type: none;
@@ -121,52 +122,6 @@
        #jobs_board main{
            width: 100%;
        }
-        /*#jobs_board .main-body{
-            margin:20px;
-        }
-
-        #jobs_board .form-wrapper {
-            margin-bottom: 20px;
-        }
-        #jobs_board .form-recruit-search{
-            margin: 5px 0 5px 0;
-        }
-
-        #jobs_board .form-recruit-search .form-group {
-            margin-bottom: 0 !important;
-        }
-
-        #jobs_board .form-recruit-search,  .form-control:focus {
-            border: 0 !important;
-            outline: 0 !important;
-            box-shadow: none;
-        }*/
-
-        #jobs_board .form-recruit-search input {
-            padding: 10px 1px;
-            width: 100%;
-            border: 0 !important;
-            font-size: 12px;
-            text-align: center;
-            border: transparent;
-            border-right: 1px solid #ccc;
-            outline: 0;
-        }
-        #jobs_board .form-recruit-search select {
-            margin-bottom: 10px;
-            border: 0 !important;
-        }
-
-        #jobs_board .main-content-card1 button{
-            width: 100%;
-            padding: 12px 10px;
-            line-height: 12px;
-            font-size: 14px;
-        }
-
-        /*#jobs_board .form-card .sideBar_menu_item{
-            margin-top: 10px;
-        }*/
 
         #jobs_board .cards{
             background-color: #ffffff;
@@ -177,54 +132,6 @@
         }
         #jobs_board .cards:hover{
             border: 2px solid #0074FF;
-        }
-
-        #jobs_board .rec-job-items small{
-            font-size: 9px;
-        }
-        #jobs_board .job-title a{
-            background-color: #ECF3FF;
-            color: #2979FF;
-            border-radius: 15px;
-            padding: 2px 4px;
-            font-size: 5px;
-        }
-        #jobs_board .job-title span{
-            padding-bottom: 5px;
-        }
-
-
-        #jobs_board .job-title, .icons, .job_desc, .job_desc div, .job_desc h6, .recruiter span, .recruiter h6{
-            margin-bottom: 5px;
-            font-size: 10px;
-        }
-        #jobs_board .recruiter span{
-            padding-left: 5px;
-        }
-        /*#jobs_board .recruiter-item-btn{
-            padding: 20px 20px 0 67px;
-        }*/
-        #jobs_board .recruiter-item-btn button , .main-content-card1 button{
-            width: 100px;
-            padding: 5px;
-            color: #fff;
-            background-color: #E33D47;
-            border: 0;
-            border-radius: 5px;
-        }
-
-        #jobs_board .recruiter img{
-            width: 25px;
-        }
-
-        /*#jobs_board .job-title{
-            display: flex;
-            justify-content: space-between;
-        }*/
-
-        #jobs_board .advert img {
-            width: 100%;
-            margin-bottom: 10px;
         }
 
 
@@ -322,67 +229,6 @@
                 width: 200px;
                 height: 100vh;
                 padding: 30px 0 0 20px;
-            }
-
-            /*#jobs_board .form-wrapper {
-                background-color: #fff;
-                margin-bottom: 30px;
-                border-radius: 5px;
-            }
-            #jobs_board .form-card{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5px;
-            }
-            #jobs_board .form-card1{
-                width: 25%;
-            }*/
-            #jobs_board .form-recruit-search input{
-                padding: 0 40px;
-                text-align: left;
-                border-right: 1px solid #ccc !important;
-            }
-            /*#jobs_board .location{
-                border-right: 1px solid #ccc !important;
-                border-left: 1px solid #ccc !important;
-            }*/
-
-            #jobs_board .main-content-card1 h6{
-                font-size: 14px;
-                line-height: 21px;
-                padding: 13px 30px 0 10px;
-            }
-            #jobs_board .main-content-card1 button{
-                width: 120px;
-                padding: 10px;
-                font-weight: 600;
-                font-size: 14px;
-                margin: 10px 0 0 20px;
-
-            }
-
-            #jobs_board .job-title a{
-                padding: 3px 10px;
-                font-size: 10px;
-                margin-right: 10px;
-            }
-            #jobs_board  .job_desc p{
-                padding: 8px 0 0 10px;
-            }
-
-            /*#jobs_board .recruiter{
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
-            }*/
-/*            #jobs_board .recruiter img{
-                width: 30px;
-            }*/
-            #jobs_board .recruiter-item-btn button {
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 21px;
             }
         }
 
@@ -494,98 +340,15 @@
                 color: #999999;
                 padding: 15px;
             }
-            /*#jobs_board .cards{
+            #jobs_board .cards{
                 padding: 20px;
                 margin-bottom: 20px;
-            }
-
-            #jobs_board .form-wrapper {
-                background-color: #fff;
-                margin-bottom: 30px;
-            }*/
-
-            #jobs_board .form-recruit-search input{
-                padding: 0 40px;
-                text-align: left;
-                border-right: 1px solid #ccc !important;
-            }
-            #jobs_board .main-content-card1 h6{
-                font-size: 14px;
-                line-height: 21px;
-                padding: 13px 30px 0 10px;
-            }
-            #jobs_board .main-content-card1 button{
-                width: 125px;
-                margin: 10px 0 0 200px;
-                padding: 5px;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 24px;
-            }
-            #jobs_board .rec-job-items h6 {
-                font-size: 14px;
-                line-height: 24px;
-
-            }
-
-            #jobs_board .job-title a{
-                padding: 5px 20px;
-                font-size: 13px;
-                margin-right: 10px;
-            }
-            #jobs_board  .job_desc p{
-                padding: 8px 0 0 10px;
-            }
-
-            #jobs_board .rec-job-items small, .rec-job-items span, .rec-job-items p {
-                font-size: 13px;
-                line-height: 19px;
-            }
-            /*#jobs_board .rec-job-desc{
-                margin: 5px 0;
-            }
-
-            #jobs_board .rec-job-items{
-                font-size: 10px;
-                line-height: 22px;
-                margin-bottom: 20px;
-            }
-            #jobs_board .rec-job-icon{
-                margin-right: 50px;
-            }*/
-            #jobs_board .rec-job-icon svg, .rec-job-icon img{
-                width: 20px;
-                height: 20px;
-            }
-
-            #jobs_board .rec-job-icon small{
-                font-size: 13px;
-                line-height: 19px;
-            }
-
-            #jobs_board .rec-job-icon span{
-                padding-top: 0;
-                padding-right: 9px;
-            }
-
-            /*#jobs_board .recruiter{
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
-            }*/
-            /*#jobs_board .recruiter img{
-                width: 30px;
-            }*/
-            #jobs_board .recruiter-item-btn button {
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 21px;
             }
 
         }
 
     </style>
-    @if( View::hasSection('style')) @yield('style') @endif
+    @yield('style')
 </head>
 <body>
 <div id="jobs_board">

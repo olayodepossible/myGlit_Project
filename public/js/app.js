@@ -37281,7 +37281,9 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./menu */ "./resources/js/menu.js"); // window.Vue = require('vue');
+__webpack_require__(/*! ./menu */ "./resources/js/menu.js");
+
+__webpack_require__(/*! ./pagination */ "./resources/js/pagination.js"); // window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -37475,6 +37477,32 @@ $(document).ready(function () {
     $(".top_nav").toggle("slow");
   });
   /*  Job Page Ends */
+});
+
+/***/ }),
+
+/***/ "./resources/js/pagination.js":
+/*!************************************!*\
+  !*** ./resources/js/pagination.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('.pagination_section a').click(function (e) {
+    e.preventDefault();
+    var page = $(this).attr('href').split('page')[1];
+    fetch_data(page);
+  });
+
+  function fetch_data(page) {
+    $.ajax({
+      url: "/jobs/search/?page=" + page,
+      success: function success(data) {
+        console.log("Page ".concat(page, " data was successful"));
+      }
+    });
+  }
 });
 
 /***/ }),

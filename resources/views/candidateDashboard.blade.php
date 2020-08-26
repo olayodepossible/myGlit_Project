@@ -7,8 +7,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
+        <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css') }}" rel="stylesheet">
         <script src="{{ url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')}}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
         <title>
             MyGlit:Candidate Dashboard
         </title>
@@ -66,7 +69,8 @@
                 height: 100%;
             }
 
-            #candidate-dashboard .top_nav-1, #candidate-dashboard .top_nav-2{
+            #candidate-dashboard .top_nav-1,
+            #candidate-dashboard .top_nav-2{
                 font-size: 1.8rem;
                 padding: 20px;
 
@@ -101,7 +105,10 @@
             #candidate-dashboard .menu_bottom_list{
                 padding-right: 120px;
             }
-            #candidate-dashboard header, .left-side-bar, .main-content, .right-side-bar{
+            #candidate-dashboard header,
+            #candidate-dashboard .left-side-bar,
+            #candidate-dashboard .main-content,
+            #candidate-dashboard .right-side-bar{
                 margin: 0 10px 20px 10px;
             }
 
@@ -147,18 +154,33 @@
                 border: 0;
             }
 
-            #card1 .main-content div{
+            #candidate-dashboard .form-control{
+                border: 0 !important;
+                outline: 0 !important;
+                box-shadow: none!important;
+            }
+            #candidate-dashboard .main-content div{
                 border-bottom: 0;
             }
-            #candidate-dashboard .main-content-card1{
+
+            /*#recruiterAfterLogin .user_section{
+                background-color: #F2F2F2;
+                border: 0;
+                margin: 0;
+                padding: 0;
+            }
+            /*#candidate-dashboard .main-content-card1{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-            }
-            #candidate-dashboard .input2{
+            }*/
+            /*#candidate-dashboard .input2{
                 border: 0;
                 border-left: 1px solid #ccc;
                 padding-left: 20px;
+            }*/
+            #candidate-dashboard .main-content-card1 {
+                margin: 5px 0;
             }
             #candidate-dashboard .main-content-card1 h6{
                 font-size: 10px;
@@ -170,7 +192,7 @@
                 background-color: #E33D47;
                 color: #ffffff;
                 border-radius: 5px;
-                width: 60px;
+                width: 100%;
                 padding: 12px;
                 line-height: 12px;
 
@@ -183,8 +205,7 @@
             }
             #candidate-dashboard .rec-job-items{
                 font-size: 10px;
-                line-height: 22px;
-                margin-bottom: 20px;
+                padding-bottom: 20px;
             }
             #candidate-dashboard .rec-job-items h6{
                 margin-top: 10px;
@@ -204,7 +225,6 @@
             }
 
             #candidate-dashboard .rec-job-icon span{
-                padding-top: 5px;
                 padding-right: 3px;
             }
 
@@ -310,7 +330,8 @@
                     left: 0;
                 }
 
-                #candidate-dashboard .top_nav-1,  #candidate-dashboard .top_nav-2{
+                #candidate-dashboard .top_nav-1,
+                #candidate-dashboard .top_nav-2{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -402,6 +423,27 @@
                 #candidate-dashboard .main-content{
                     width: 500px;
                 }
+                #candidate-dashboard .form-card{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    border: 1px solid #DDDDDD;
+                }
+                #candidate-dashboard .form-group{
+                    margin: 0!important;
+                }
+                #candidate-dashboard .form-card1 input{
+                    border-right: 1px solid #ccc !important;
+                    border-radius: unset;
+                }
+                #candidate-dashboard .form-control{
+                    font-size: 0.7rem;
+                    margin-top: 10px;
+                }
+                #candidate-dashboard .main-content-card1 {
+                    margin: 6px;
+                }
                 #candidate-dashboard .main-content-card1 h6{
                     font-size: 13px;
                     line-height: 21px;
@@ -413,6 +455,10 @@
                     font-weight: 600;
                     font-size: 13px;
                     border: 0;
+                }
+                #candidate-dashboard .rec-job-items{
+                    font-size: 12px;
+                    padding: 10px;
                 }
                 #candidate-dashboard .rec-job-items h6 {
                     font-size: 14px;
@@ -591,9 +637,32 @@
                 #candidate-dashboard .main-content{
                     width: 750px;
                 }
+                #candidate-dashboard .form-card{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    border: 1px solid #DDDDDD;
+                    margin-bottom: 10px;
+
+                }
+                #candidate-dashboard .form-group{
+                    margin: 0!important;
+                }
+                #candidate-dashboard .form-control{
+                    margin-top: 15px;
+                }
+                #candidate-dashboard .form-card1 input{
+                    border-right: 1px solid #ccc !important;
+                    border-radius: unset;
+                }
+
                 #candidate-dashboard .cards{
                     padding: 20px;
                     margin-bottom: 20px;
+                }
+                #candidate-dashboard .main-content-card1 {
+                    margin: 5px 10px;
                 }
                 #candidate-dashboard .main-content-card1 h6{
                     font-size: 14px;
@@ -960,28 +1029,32 @@
                 </aside>
 
                 <div class="main-content">
-                    <div class="cards form-card d-flex justify-content-around">
-                        <div class=" form-card1 main-content-card1">
-                            <input style="border: 0;"
-                                type="text"
-                                name="job_title"
-                                placeholder="Job Title, Skills"
-                            />
+                    <form>
+                        <div class="form-card">
+                            <div class=" form-group form-card1 main-content-card1">
+                                <input
+                                       type="text"
+                                       name="job_title"
+                                       class="form-control"
+                                       placeholder="Job Title, Skills"
+                                />
+                            </div>
+                            <div class="form-group main-content-card1">
+                                <input
+
+                                    type="text"
+                                    name="location"
+                                    class="form-control"
+                                    placeholder="Location(City, State, Country)"
+                                />
+                            </div>
+                            <div class="main-content-card1">
+                                <a  href="#" type="button">
+                                    <button>Find Jobs</button>
+                                </a>
+                            </div>
                         </div>
-                        <div class=" form-card1 main-content-card1">
-                            <input
-                                type="text"
-                                name="location"
-                                class="input2"
-                                placeholder="Location(City, State, Country)"
-                            />
-                        </div>
-                        <div class="main-content-card1">
-                            <a  href="#">
-                                <button>Find Jobs</button>
-                            </a>
-                        </div>
-                    </div>
+                    </form>
 
                     <div  class="cards">
                         <div class="rec-job">
@@ -997,35 +1070,25 @@
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex justify-content-between rec-job-icon">
                                                 <span>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                                         width="12" height="12"
-                                                         viewBox="0 0 172 172"
-                                                         style=" fill:#000000;">
-                                                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="0" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                                            <path d="M0,172v-172h172v172z" fill="none"></path>
-                                                            <g fill="#cccccc">
-                                                                <path d="M86,6.88c-8.50594,0 -16.11156,2.51281 -21.715,6.7725c-4.66281,3.53406 -7.94156,8.37156 -8.9225,13.8675h-45.0425c-5.65719,0 -10.32,4.66281 -10.32,10.32v57.835c-0.02687,0.215 -0.02687,0.43 0,0.645v58.48c0,5.65719 4.66281,10.32 10.32,10.32h151.36c5.65719,0 10.32,-4.66281 10.32,-10.32v-58.8025c0,-0.1075 0,-0.215 0,-0.3225v-57.835c0,-5.65719 -4.66281,-10.32 -10.32,-10.32h-45.0425c-0.98094,-5.49594 -4.25969,-10.33344 -8.9225,-13.8675c-5.60344,-4.25969 -13.20906,-6.7725 -21.715,-6.7725zM86,13.76c7.16219,0 13.28969,2.16344 17.5225,5.375c3.14438,2.39188 5.25406,5.21375 6.1275,8.385h-47.3c0.87344,-3.17125 2.98313,-5.99312 6.1275,-8.385c4.23281,-3.21156 10.36031,-5.375 17.5225,-5.375zM10.32,34.4h151.36c1.94844,0 3.44,1.49156 3.44,3.44v57.835c-0.01344,0.14781 -0.01344,0.28219 0,0.43v0.215c0,1.94844 -1.49156,3.44 -3.44,3.44h-58.48c0,-5.65719 -4.66281,-10.32 -10.32,-10.32h-13.76c-5.65719,0 -10.32,4.66281 -10.32,10.32h-58.48c-1.94844,0 -3.44,-1.49156 -3.44,-3.44c0.02688,-0.215 0.02688,-0.43 0,-0.645v-57.835c0,-1.94844 1.49156,-3.44 3.44,-3.44zM79.12,96.32h13.76c1.94844,0 3.44,1.49156 3.44,3.44v2.795c0,0.1075 0,0.215 0,0.3225v0.3225c-0.02687,0.25531 -0.02687,0.49719 0,0.7525v2.6875c0,1.94844 -1.49156,3.44 -3.44,3.44h-13.76c-1.94844,0 -3.44,-1.49156 -3.44,-3.44v-2.795c0.09406,-0.45687 0.09406,-0.94062 0,-1.3975v-2.6875c0,-1.94844 1.49156,-3.44 3.44,-3.44zM6.88,105.995c1.08844,0.38969 2.23063,0.645 3.44,0.645h58.48c0,5.65719 4.66281,10.32 10.32,10.32h13.76c5.65719,0 10.32,-4.66281 10.32,-10.32h58.48c1.20938,0 2.35156,-0.25531 3.44,-0.645v48.805c0,1.94844 -1.49156,3.44 -3.44,3.44h-151.36c-1.94844,0 -3.44,-1.49156 -3.44,-3.44z"></path>
-                                                            </g>
-                                                        </g>
-                                                    </svg>
+                                                    <i class="mdi mdi-briefcase-outline"></i>
                                                 </span>
                                                 <small>0-10Years</small>
                                             </div>
                                             <div class="d-flex justify-content-between rec-job-icon">
                                                <span>
-                                                    <img src="https://img.icons8.com/carbon-copy/15/000000/place-marker.png" alt=""/>
+                                                    <i class="mdi mdi-map-marker-outline"></i>
                                                 </span>
                                                 <small> Mumbai, Maharashtra</small>
                                             </div>
                                             <div class="d-flex justify-content-between rec-job-icon">
                                                 <span>
-                                                    <img src="https://img.icons8.com/carbon-copy/15/000000/open-envelope.png" alt=""/>
+                                                    <img src="/img/purse_icon.png" alt=""/>
                                                 </span>
                                                 <small>Rs 2 - 6 Lacs p.a</small>
                                             </div>
                                         </div>
 
-                                        <p class="rec-job-desc"><strong>Job Description:</strong> {{$item["job-desc"]}}! New Year offers wid better package & incentives...</p>
+                                        <p class="rec-job-desc"><strong>Job Description:</strong> {{$item["job-desc"]}}! New Year offers with better package & incentives...</p>
                                         <div  class="d-flex justify-content-between">
                                             <p class="rec-job-desc"> <strong>Key Skills:</strong> {{$item["key Skill"]}}  </p>
                                             <p class="rec-job-desc">Posted 2 days ago </p>
