@@ -162,23 +162,6 @@
             #candidate-dashboard .main-content div{
                 border-bottom: 0;
             }
-
-            /*#recruiterAfterLogin .user_section{
-                background-color: #F2F2F2;
-                border: 0;
-                margin: 0;
-                padding: 0;
-            }
-            /*#candidate-dashboard .main-content-card1{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }*/
-            /*#candidate-dashboard .input2{
-                border: 0;
-                border-left: 1px solid #ccc;
-                padding-left: 20px;
-            }*/
             #candidate-dashboard .main-content-card1 {
                 margin: 5px 0;
             }
@@ -271,10 +254,10 @@
             }
 
 
-            #candidate-dashboard .right-side-bar img{
+            /*#candidate-dashboard .right-side-bar img{
                 width: 100px;
                 height: 120px;
-            }
+            }*/
             #candidate-dashboard .right-side-bar .online-user, .premium{
                 background-color: #FFFFFF;
                 border: 1px solid #DDDDDD;
@@ -363,7 +346,6 @@
                 #candidate-dashboard .bottom-header-list{
                     display: flex;
                     justify-content: space-between;
-                    /*padding-right: 45px;*/
                     padding-top: 5px;
                 }
                 #candidate-dashboard .menu_bottom_item{

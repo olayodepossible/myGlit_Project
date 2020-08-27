@@ -34,18 +34,6 @@
             box-shadow: none!important;
         }
 
-        /*#jobSearch .sideBar_menu_item {
-            border: 0;
-            background-color: #F6F6F6;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        #jobSearch .sideBar_menu_item .dropdown-item{
-            background-color: #fff;
-            margin-bottom: 5px;
-        }*/
-
         #jobSearch .advert{
             padding-bottom: 10px;
         }
@@ -72,7 +60,7 @@
         }
 
 
-        @media screen and (min-width: 600px) and (max-width: 768px) {
+        @media screen and (min-width: 768px) {
             #jobSearch .advert img{
                 width: 100%;
             }
@@ -87,7 +75,7 @@
         }
 
 
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 992px){
             #jobSearch  .result-text{
                 padding: 30px 0 15px 30px;
             }
