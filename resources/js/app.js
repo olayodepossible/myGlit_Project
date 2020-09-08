@@ -7,6 +7,7 @@
 require('./bootstrap');
 require('./menu');
 require('./pagination');
+require('./recruiter');
 
 // window.Vue = require('vue');
 

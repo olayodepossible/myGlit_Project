@@ -10,7 +10,6 @@
     <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css') }}" rel="stylesheet">
-    <script src="{{ url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')}}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <title>
         @if( View::hasSection('title')) @yield('title') @else {{ 'MyGlit' }}@endif
@@ -138,7 +137,7 @@
 
 
         /* Meduim Screen*/
-        @media screen and (min-width: 600px) and (max-width:768px) {
+        @media screen and (min-width: 600px) {
             #jobs_board header{
                 width: 100%;
                 padding: 0;
@@ -327,11 +326,6 @@
             #jobs_board .main-wrapper {
                 margin-top: 110px;
             }
-
-            /*#jobs_board .form-recruit-search{
-                border-radius: 5px;
-                background-color: #fff;
-            }*/
             #jobs_board .sideBar_menu_item{
                 font-size: 13px;
                 line-height: 19px;
