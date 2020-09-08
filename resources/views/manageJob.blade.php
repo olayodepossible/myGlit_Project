@@ -21,20 +21,18 @@
             background-color: #ffffff;
             border: 1px solid #ddd;
             border-radius: 5px;
+            border-top: none;
         }
         #manageJob .job_table div{
-            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
             padding: 10px;
             width: 100%;
         }
         #manageJob .job_table p{
             font-size: 12px;
         }
-        #manageJob .tHead,
-        #manageJob .tBody{
-            display: grid;
-        }
         #manageJob .tHead{
+            display: grid;
             grid-template-columns: 6fr 2fr 4fr;
             background-color: #F7F7FC;
         }
@@ -49,6 +47,7 @@
         }
 
         #manageJob .tBody{
+            display: grid;
             grid-template-columns: 6fr 1fr 1fr 1fr;
         }
 
@@ -78,6 +77,9 @@
             #manageJob h5{
                font-size: 24px;
             }
+            #manageJob .job_table div{
+                padding: 10px 10px 10px 25px;
+            }
             #manageJob .job_table p{
                 font-size: 16px;
             }
@@ -106,6 +108,9 @@
             #manageJob .job_table{
                 width: 100%;
             }
+            #manageJob .job_table div{
+                padding: 10px 10px 10px 25px;
+            }
             #manageJob .job_table p{
                 font-size: 16px;
             }
@@ -130,7 +135,7 @@
 @section('content')
     <div id="manageJob" >
         <h5>Manage Jobs</h5>
-            <div class=" wrapper_class">
+        <div class=" wrapper_class">
 
                 <div class="job_table ">
                     <div class="tHead">
