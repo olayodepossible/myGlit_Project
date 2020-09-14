@@ -90,7 +90,7 @@
         }
         #recruiter-dashboard .cards{
             width: 100%;
-            background-color: #ffffff;
+            background-color: #fff;
             padding: 10px 1.5rem;
             border-radius: 10px;
             margin-bottom: 1em;
@@ -100,8 +100,11 @@
         #recruiter-dashboard .cards:hover{
             border: 1px solid #4A8CFB;
         }
+        #recruiter-dashboard .cards h5{
+            color: #8D9AA7;
+        }
         #recruiter-dashboard .total {
-            background-color: #ECF3FF;
+            background-color: #EBF2FF;
             width: 8rem;
             padding: 4px;
             font-size: 14px;
@@ -129,12 +132,6 @@
         }
 
 
-        #recruiter-dashboard .card-group-wrapper{
-            margin-left: auto;
-            margin-right: auto;
-            padding: 1rem;
-        }
-
         #recruiter-dashboard .card-groups > * {
             padding: 1rem;
         }
@@ -142,7 +139,8 @@
             padding-top: 2.5rem;
         }
         #recruiter-dashboard .card-groups {
-            width: 260px;
+            width: 100%;
+            height: max-content;
             border: 1px solid #DDDDDD;
             border-radius: 10px;
             background-color: #ffffff;
@@ -179,34 +177,43 @@
             visibility: hidden;
         }
 
-        #recruiter-dashboard .days{
+        #recruiter-dashboard .days,
+        #recruiter-dashboard .top-lineUp-days{
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
         }
+        #recruiter-dashboard .days li:first-child,
+        #recruiter-dashboard .days li:last-child{
+            padding: 5px;
+        }
 
         #recruiter-dashboard .card-groups small,
-        #recruiter-dashboard .days li{
+        #recruiter-dashboard .days li,
+        #recruiter-dashboard .top-lineUp-days li{
             border: 0;
             color: #8D9AA7;
         }
 
-        #recruiter-dashboard .days li p:nth-child(2) {
+        #recruiter-dashboard .top-lineUp-days li p:nth-child(2) {
             font-size: 25px;
             font-weight: 300;
             color: #000;
         }
         #recruiter-dashboard .days button {
-            font-size: 14px;
-            border-radius: 15px;
+            width: 92px;
             border: 0;
+            border-radius: 50px;
             background-color: #e3342f;
             color: #FFFFFF;
+            padding: 5px 0;
+            font-size: 14px;
         }
 
         #recruiter-dashboard .lineups li{
             border-bottom: 1px solid rgba(211, 211, 211, 0.9);
             padding-top: 10px;
+            color: #333333;
         }
         #recruiter-dashboard .lineups li:last-child{
             border: 0;
@@ -280,21 +287,24 @@
                 margin-left: 20px;
             }
 
+            #recruiter-dashboard .card-group-wrapper{
+                display: grid;
+                grid-template-columns: repeat(2, 4fr);
+                margin: 0;
+                padding: 0;
+            }
+
             #recruiter-dashboard .card-groups{
                 width: 300px;
-                margin-right: 15px;
+                margin-left: 15px;
             }
             #recruiter-dashboard .card-groups h5{
                 font-size: 20px;
             }
-            #recruiter-dashboard .days li{
+            #recruiter-dashboard .days li,
+            #recruiter-dashboard .top-lineUp-days li{
                 width: 120px;
                 font-size: 14px;
-            }
-            #recruiter-dashboard .days button{
-                width: 70px;
-                font-size: 14px;
-                margin:1px ;
             }
             #recruiter-dashboard .company-list{
                 font-size: 10px;
@@ -365,44 +375,49 @@
                 font-size: 20px;
                 text-align: center;
                 border-radius: 30px;
-                padding: 15px;
+                padding: 10px;
             }
-            /*#recruiter-dashboard .recruitment button{
-                width: 100%;
-                font-size: 20px;
-                font-weight: bold;
-                border-radius: 15px;
-            }*/
+
             #recruiter-dashboard .card-1{
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 50px!important;
             }
-            #recruiter-dashboard .days button{
+            /*#recruiter-dashboard .days button{
                 width: 92px;
                 height: 33px;
                 border: 0;
                 border-radius: 50px;
                 background-color: #E3342f;
                 color: #FFFFFF;
-            }
+            }*/
             #recruiter-dashboard .cards{
                 width: 100%;
                 margin-right: 10px;
+                padding: 10px 10px 10px 20px;
             }
+
+            #recruiter-dashboard .card-group-wrapper{
+                display: grid;
+                grid-template-columns: repeat(3, 4fr);
+                margin: 0;
+                padding: 0;
+            }
+
             #recruiter-dashboard .card-list,
             #recruiter-dashboard .card-list h6,
             #recruiter-dashboard .user h6{
-                font-size: 18px;
+                font-size: 16px;
+            }
+
+            #recruiter-dashboard .card-groups {
+                width: 90%;
+                margin: 10px 0 25px 0;
             }
             #recruiter-dashboard .card-groups h5{
                 font-size: 20px;
             }
 
-            #recruiter-dashboard .card-groups {
-                width: 320px;
-                margin-right: 20px;
-            }
 
             #recruiter-dashboard .user small{
                 font-size: 14px;
@@ -439,37 +454,37 @@
 
         <div class=" card-1">
             <div class="cards"  >
-                <h5 class="card-text font-weight-bold text-black-50 py-2">ACTIVE USERS</h5>
+                <h5 class="card-text font-weight-bold py-2">ACTIVE USERS</h5>
                 <div class="d-flex ">
-                    <h1 class="card-title pb-0 mr-2 text-success">15,000</h1>
+                    <h1 class="card-title pb-0 mr-2" style="color: #64DEA5">15,000</h1>
                     <span class="text-black-50 pt-2"><i class="mdi mdi-arrow-up"></i> </span>
                 </div>
             </div>
             <div class="cards" >
                 <div class="d-flex justify-content-between">
-                    <h5 class="card-text font-weight-bold text-black-50 py-2">LINEUPS</h5>
+                    <h5 class="card-text font-weight-bold py-2">LINEUPS</h5>
                     <h6 class="card-text font-weight-bold  py-2">Today</h6>
                 </div>
-                <div class=" d-flex" style="color: orange">
+                <div class=" d-flex" style="color: #FFCE31">
                     <h1 class="card-title pb-0 mr-2" >15</h1>
-                    <span class="tes pt-2" style="color: #e3342f"><i class="mdi mdi-arrow-down"></i></span>
+                    <span class="tes pt-2" style="color: #ED4C4C"><i class="mdi mdi-arrow-down"></i></span>
                 </div>
             </div>
             <div class="cards" >
                 <div class="d-flex justify-content-between">
-                    <h5 class="card-text font-weight-bold text-black-50 py-2">JONNES</h5>
+                    <h5 class="card-text font-weight-bold py-2">JOINEES</h5>
                     <h6 class="card-text font-weight-bold  py-2">This Week</h6>
                 </div>
                 <div class="d-flex ">
-                    <h1 class="card-title pb-0 mr-2 text-primary">5</h1>
-                    <span class="text-black-50 pt-2"><i class="mdi mdi-arrow-up"></i> </span>
+                    <h1 class="card-title pb-0 mr-2" style="color: #5C98FE">5</h1>
+                    <span class=" pt-2" style="color: #333"><i class="mdi mdi-arrow-up"></i> </span>
                 </div>
                 <div class="total">Total Selects 10</div>
             </div>
         </div>
         <div class="easy-tab">
             <ul
-                class="nav nav-pills mb-2 pills-red"
+                class="nav nav-pills mb-4 pills-red"
                 id="pills-tab"
                 role="tablist"
             >
@@ -494,7 +509,7 @@
                         role="tab"
                         aria-controls="pills-settings"
                         aria-selected="false"
-                    >Settings</a
+                    >Selects</a
                     >
                 </li>
                 <li class="nav-item">
@@ -517,64 +532,52 @@
                     role="tabpanel"
                     aria-labelledby="pills-lineups-tab"
                 >
-                    <div class=" row card-group-wrapper">
+                    <div class="card-group-wrapper">
 
-                        <div class="card-accordion">
-                            <div
-                                class="accordion md-accordion card-groups card-group1"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
-                            >
-                                <div class="lineup country-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Total Lineups (142709)</h5></div>
-                                        <div class="card-header" role="tab" id="topLineup">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#topLineups"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
+                        <div class=" card-groups card-group1">
+                            <div class="lineup country-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Total Lineups (142709)</h5></div>
+                                    {{--<div class="card-header" role="tab" id="topLineup">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#topLineups"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
                                                     <span id="totalLineup-minus">
                                                         <i class="mdi mdi-minus"></i>
                                                     </span>
-                                            </a>
-                                        </div>
-                                    </div>
-
+                                        </a>
+                                    </div>--}}
                                 </div>
-                                <div
-                                    id="topLineups"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="topLineup"
-                                    data-parent="#accordionEx"
-                                >
-                                    <ul class="days">
-                                        <li>
-                                            <p>Yesterday</p>
-                                            <p>1000</p>
-                                            <p  style="color: #e3342f"><span><i class="mdi mdi-arrow-down"></i></span>200</p>
-                                        </li>
-                                        <li>
-                                            <p>Today</p>
-                                            <p>900</p>
-                                            <p  style="color: #03a678"><span><i class="mdi mdi-arrow-up"></i></span>600</p>
-                                        </li>
-                                        <li>
-                                            <p>Tomorrow</p>
-                                            <p>1500</p>
-                                            <p style="color: #03a678"><span><i class="mdi mdi-arrow-up"></i></span>1000</p>
 
-                                        </li>
-                                    </ul>
-                                    <div class="lineups country-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                            </div>
+                            <div>
+                                <ul class="top-lineUp-days">
+                                    <li>
+                                        <p>Yesterday</p>
+                                        <p>1000</p>
+                                        <p  style="color: #ED4C4C"><span><i class="mdi mdi-arrow-down"></i></span>200</p>
+                                    </li>
+                                    <li>
+                                        <p>Today</p>
+                                        <p>900</p>
+                                        <p  style="color: #4DBA87"><span><i class="mdi mdi-arrow-up"></i></span>600</p>
+                                    </li>
+                                    <li>
+                                        <p>Tomorrow</p>
+                                        <p>1500</p>
+                                        <p style="color: #4DBA87"><span><i class="mdi mdi-arrow-up"></i></span>1000</p>
+
+                                    </li>
+                                </ul>
+                                <div class="lineups country-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
                                                         <span>
                                                           <img
                                                               src="/img/flags/india.png"
@@ -582,23 +585,23 @@
                                                               alt="country flag"
                                                           />
                                                         </span>
-                                                        <span> India</span>
+                                                    <span> India</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>106</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>106</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success">
-                                                                <i class="mdi mdi-arrow-down"></i>336&percnt;
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
                                                 <span>
                                                   <img
                                                       src="/img/flags/nigeria.png"
@@ -606,23 +609,23 @@
                                                       alt="country flag"
                                                   />
                                                 </span>
-                                                        <span>Nigeria</span>
+                                                    <span>Nigeria</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success">
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-down"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
                                                 <span>
                                                   <img
                                                       src="/img/flags/poland.png"
@@ -631,23 +634,23 @@
 
                                                   />
                                                 </span>
-                                                        <span> Poland</span>
+                                                    <span> Poland</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>106</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>106</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success">
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>3000&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
                                                 <span>
                                                   <img
                                                       src="/img/flags/libya.png"
@@ -655,23 +658,23 @@
                                                       alt="country flag"
                                                   />
                                                 </span>
-                                                        <span> Libya</span>
+                                                    <span> Libya</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #e3342f">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
                                                                 <i class="mdi mdi-arrow-down"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
                                                 <span>
                                                   <img
                                                       src="/img/flags/malta.png"
@@ -679,23 +682,23 @@
                                                       alt="country flag"
                                                   />
                                                 </span>
-                                                        <span> Mali</span>
+                                                    <span> Mali</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>106</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>106</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success">
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>10016&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
                                                 <span>
                                                   <img
                                                       src="/img/flags/ghana.png"
@@ -703,629 +706,635 @@
                                                       alt="country flag"
                                                   />
                                                 </span>
-                                                        <span> Ghana</span>
+                                                    <span> Ghana</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success">
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-
                             </div>
-                            <div
-                                class="accordion md-accordion card-groups card-group1"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
-                            >
+
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="lineup top-company-info">
                                 <div class="d-flex justify-content-between">
-                                    <div><h5>Countries</h5></div>
-                                    <div class="card-header" role="tab" id="headingOne1">
+                                    <div><h5>Top Companies</h5></div>
+                                    <div class="card-header" role="tab" id="headingTwo2">
                                         <a
                                             data-toggle="collapse"
                                             data-parent="#accordionEx"
-                                            href="#countries"
+                                            href="#top-companies"
                                             aria-expanded="true"
                                             aria-controls="collapseOne1"
                                         >
+                                                <span id="top-companies-minus">
+                                                    <i class="mdi mdi-minus"></i>
+                                                </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                id="top-companies"
+                                class="collapse show company-lineup"
+                                role="tabpanel"
+                                aria-labelledby="headingTwo2"
+                                data-parent="#accordionEx"
+                            >
+                                <ul class="days ">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups company-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="company-list d-flex justify-content-between">
+                                                <div class="card-list">
+                                                    <h6>Tele-performance</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>FIS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>WNS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Genpact</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Accenture</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
+                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Company Site</h5></div>
+                                    <div class="card-header" role="tab" id="headingThree3">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-company-site"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
+                                                <span id="top-company-site-minus">
+                                                    <i class="mdi mdi-minus"></i>
+                                                </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div
+                                id="top-company-site"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingThree3"
+                                data-parent="#accordionEx1"
+                            >
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups company-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="company-list d-flex justify-content-between">
+                                                <div class="card-list">
+                                                    <h6>Tele-performance</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>FIS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>WNS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Genpact</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Accenture</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
+                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group1"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="d-flex justify-content-between">
+                                <div><h5>Countries</h5></div>
+                                <div class="card-header" role="tab" id="headingOne1">
+                                    <a
+                                        data-toggle="collapse"
+                                        data-parent="#accordionEx"
+                                        href="#countries"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne1"
+                                    >
                                                 <span id="country-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
 
-                                        </a>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div
-                                    id="countries"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingOne1"
-                                    data-parent="#accordionEx"
-                                >
+                            </div>
+                            <div
+                                id="countries"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingOne1"
+                                data-parent="#accordionEx"
+                            >
 
-                                    <ul class="days">
-                                        <li>Yesterday</li>
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups country-lineup">
+                                    <ul class="cross-nav">
                                         <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups country-lineup">
-                                        <ul class="cross-nav">
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> India</span>
+                                                    <span> India</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span>Nigeria</span>
+                                                    <span>Nigeria</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                           <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                           <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>180&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> Poland</span>
+                                                    <span> Poland</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>666&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span>Philippines</span>
+                                                    <span>Philippines</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>900&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> Mali</span>
+                                                    <span> Mali</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>106&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> Ghana</span>
+                                                    <span> Ghana</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>166</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>166</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>333&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-accordion">
-                            <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
-                            >
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Companies</h5></div>
-                                        <div class="card-header" role="tab" id="headingTwo2">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-companies"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
-                                                <span id="top-companies-minus">
-                                                    <i class="mdi mdi-minus"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="top-companies"
-                                    class="collapse show company-lineup"
-                                    role="tabpanel"
-                                    aria-labelledby="headingTwo2"
-                                    data-parent="#accordionEx"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
-                                        <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups company-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="company-list d-flex justify-content-between">
-                                                    <div class="card-list">
-                                                        <h6>Tele-performance</h6>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>FIS</h6>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>WNS</h6>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Genpact</h6>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Accenture</h6>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
-                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false">
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Recruiter</h5></div>
-                                        <div class="card-header" role="tab" id="headingFour4">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-recruiter"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false">
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Recruiter</h5></div>
+                                    <div class="card-header" role="tab" id="headingFour4">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-recruiter"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
                                                 <span id="top-recruiter-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="top-recruiter"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingFour4"
-                                    data-parent="#accordionEx"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
-                                        <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups recruiter-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Raghu</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Hemanth Patil</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Akang Ekaette Helen</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Hemanth Patil</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Shaira Maae G.Yunque</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
-                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="card-accordion">
                             <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
+                                id="top-recruiter"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingFour4"
+                                data-parent="#accordionEx"
                             >
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Company Site</h5></div>
-                                        <div class="card-header" role="tab" id="headingThree3">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-company-site"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
-                                                <span id="top-company-site-minus">
-                                                    <i class="mdi mdi-minus"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div
-                                    id="top-company-site"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingThree3"
-                                    data-parent="#accordionEx1"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups recruiter-lineup">
+                                    <ul>
                                         <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups company-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="company-list d-flex justify-content-between">
-                                                    <div class="card-list">
-                                                        <h6>Tele-performance</h6>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Raghu</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>FIS</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Hemanth Patil</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>180&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>WNS</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Akang Ekaette Helen</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>666&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Genpact</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Hemanth Patil</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>900&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Accenture</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
+                                                    <div class="user">
+                                                        <h6>Shaira Maae G.Yunque</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-down"></i>106&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+
+                        {{--<div class="card-accordion">
+
+                        </div>--}}
+                        {{--<div class="card-accordion">
+
+
+                        </div>--}}
+
+                        {{--<div class="card-accordion">
+
+                        </div>--}}
 
                     </div>
                 </div>
@@ -1335,613 +1344,603 @@
                     role="tabpanel"
                     aria-labelledby="pills-settings-tab"
                 >
-                    <div class=" row card-group-wrapper">
+                    <div class=" card-group-wrapper">
 
-                        <div class="card-accordion">
-
-                            <div
-                                class="accordion md-accordion card-groups card-group1"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
-                            >
-                                <div class="d-flex justify-content-between">
-                                    <div><h5>Top Countries</h5></div>
-                                    <div class="card-header" role="tab" id="headingOne1">
-                                        <a
-                                            data-toggle="collapse"
-                                            data-parent="#accordionEx"
-                                            href="#countries"
-                                            aria-expanded="true"
-                                            aria-controls="collapseOne1"
-                                        >
+                        <div
+                            class="accordion md-accordion card-groups card-group1"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="d-flex justify-content-between">
+                                <div><h5>Top Countries</h5></div>
+                                <div class="card-header" role="tab" id="headingOne1">
+                                    <a
+                                        data-toggle="collapse"
+                                        data-parent="#accordionEx"
+                                        href="#countries"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne1"
+                                    >
                                                 <span id="country-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
 
-                                        </a>
-                                    </div>
-                                </div>
-                                <div
-                                    id="countries"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingOne1"
-                                    data-parent="#accordionEx"
-                                >
-
-                                    <ul class="days">
-                                        <li>Yesterday</li>
-                                        <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups country-lineup">
-                                        <ul class="cross-nav">
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
-
-                                                        <span> India</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
-
-                                                        <span>Nigeria</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                           <span class="text-success" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
-
-                                                        <span> Poland</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
-
-                                                        <span>Philippines</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
-
-                                                        <span> Mali</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>106&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
-
-                                                        <span> Ghana</span>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>166</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>333&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
-
                             <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
+                                id="countries"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingOne1"
+                                data-parent="#accordionEx"
                             >
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Company Sites</h5></div>
-                                        <div class="card-header" role="tab" id="headingThree3">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-company-site"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
-                                                <span id="top-company-site-minus">
-                                                    <i class="mdi mdi-minus"></i>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
 
-
-                                </div>
-                                <div
-                                    id="top-company-site"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingThree3"
-                                    data-parent="#accordionEx1"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups country-lineup">
+                                    <ul class="cross-nav">
                                         <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups company-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="company-list d-flex justify-content-between">
-                                                    <div class="card-list">
-                                                        <h6>Tele-performance</h6>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
+
+                                                    <span> India</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>FIS</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
+
+                                                    <span>Nigeria</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                           <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>180&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>WNS</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
+
+                                                    <span> Poland</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>666&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Genpact</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
+
+                                                    <span>Philippines</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>900&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Accenture</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
+
+                                                    <span> Mali</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
-                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>106&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
+
+                                                    <span> Ghana</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>166</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>333&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-accordion">
-
-                            <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false">
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Recruiters</h5></div>
-                                        <div class="card-header" role="tab" id="headingFour4">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-recruiter"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false">
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Recruiter</h5></div>
+                                    <div class="card-header" role="tab" id="headingFour4">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-recruiter"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
                                                 <span id="top-recruiter-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="top-recruiter"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingFour4"
-                                    data-parent="#accordionEx"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
-                                        <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups recruiter-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Raghu</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Hemanth Patil</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Akang Ekaette Helen</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Hemanth Patil</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
-                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Shaira Maae G.Yunque</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
-                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="card-accordion">
                             <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
+                                id="top-recruiter"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingFour4"
+                                data-parent="#accordionEx"
                             >
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Companies</h5></div>
-                                        <div class="card-header" role="tab" id="headingTwo2">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-companies"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups recruiter-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
+                                                    </div>
+                                                    <div class="user">
+                                                        <h6>Raghu</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
+                                                    </div>
+                                                    <div class="user">
+                                                        <h6>Hemanth Patil</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
+                                                    </div>
+                                                    <div class="user">
+                                                        <h6>Akang Ekaette Helen</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
+                                                    </div>
+                                                    <div class="user">
+                                                        <h6>Hemanth Patil</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
+                                                    </div>
+                                                    <div class="user">
+                                                        <h6>Shaira Maae G.Yunque</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Companies</h5></div>
+                                    <div class="card-header" role="tab" id="headingTwo2">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-companies"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
                                                 <span id="top-companies-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
-                                            </a>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div
-                                    id="top-companies"
-                                    class="collapse show company-lineup"
-                                    role="tabpanel"
-                                    aria-labelledby="headingTwo2"
-                                    data-parent="#accordionEx"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
+                            </div>
+                            <div
+                                id="top-companies"
+                                class="collapse show company-lineup"
+                                role="tabpanel"
+                                aria-labelledby="headingTwo2"
+                                data-parent="#accordionEx"
+                            >
+                                <ul class="days ">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups company-lineup">
+                                    <ul>
                                         <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups company-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="company-list d-flex justify-content-between">
-                                                    <div class="card-list">
-                                                        <h6>Tele-performance</h6>
+                                            <div class="company-list d-flex justify-content-between">
+                                                <div class="card-list">
+                                                    <h6>Tele-performance</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>FIS</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>FIS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>180&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>WNS</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>WNS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>666&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Genpact</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Genpact</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>900&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div
-                                                    class="company-list d-flex justify-content-between"
-                                                >
-                                                    <div class="card-list">
-                                                        <h6>Accenture</h6>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Accenture</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
                                                                 <i class="mdi mdi-arrow-down"></i>106&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Company Site</h5></div>
+                                    <div class="card-header" role="tab" id="headingThree3">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-company-site"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
+                                                <span id="top-company-site-minus">
+                                                    <i class="mdi mdi-minus"></i>
+                                                </span>
+                                        </a>
                                     </div>
+                                </div>
+
+
+                            </div>
+                            <div
+                                id="top-company-site"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingThree3"
+                                data-parent="#accordionEx1"
+                            >
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups company-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="company-list d-flex justify-content-between">
+                                                <div class="card-list">
+                                                    <h6>Tele-performance</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>FIS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>WNS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Genpact</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Accenture</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
+                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -1954,331 +1953,603 @@
                     role="tabpanel"
                     aria-labelledby="pills-candidates-tab"
                 >
-                    <div class=" row card-group-wrapper">
+                    <div class=" card-group-wrapper">
 
-                        <div class="card-accordion">
-                            <div
-                                class="accordion md-accordion card-groups card-group1"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false"
-                            >
-                                <div class="d-flex justify-content-between">
-                                    <div><h5>Top Countries</h5></div>
-                                    <div class="card-header" role="tab" id="headingOne1">
-                                        <a
-                                            data-toggle="collapse"
-                                            data-parent="#accordionEx"
-                                            href="#countries"
-                                            aria-expanded="true"
-                                            aria-controls="collapseOne1"
-                                        >
+                        <div
+                            class="accordion md-accordion card-groups card-group1"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="d-flex justify-content-between">
+                                <div><h5>Top Countries</h5></div>
+                                <div class="card-header" role="tab" id="headingOne1">
+                                    <a
+                                        data-toggle="collapse"
+                                        data-parent="#accordionEx"
+                                        href="#countries"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne1"
+                                    >
                                                 <span id="country-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
 
-                                        </a>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div
-                                    id="countries"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingOne1"
-                                    data-parent="#accordionEx"
-                                >
+                            </div>
+                            <div
+                                id="countries"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingOne1"
+                                data-parent="#accordionEx"
+                            >
 
-                                    <ul class="days">
-                                        <li>Yesterday</li>
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups country-lineup">
+                                    <ul class="cross-nav">
                                         <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups country-lineup">
-                                        <ul class="cross-nav">
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> India</span>
+                                                    <span> India</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span>Nigeria</span>
+                                                    <span>Nigeria</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                           <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                           <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>180&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> Poland</span>
+                                                    <span> Poland</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>666&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span>Philippines</span>
+                                                    <span>Philippines</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>900&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> Mali</span>
+                                                    <span> Mali</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>106&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="card-list">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="card-list">
 
-                                                        <span> Ghana</span>
+                                                    <span> Ghana</span>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>166</h6>
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>166</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-success" style="color: #03a678">
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>333&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-accordion">
-                            <div
-                                class="accordion md-accordion card-groups card-group2"
-                                id="accordionEx"
-                                role="tablist"
-                                aria-multiselectable="false">
-                                <div class="lineup top-company-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div><h5>Top Recruiters</h5></div>
-                                        <div class="card-header" role="tab" id="headingFour4">
-                                            <a
-                                                data-toggle="collapse"
-                                                data-parent="#accordionEx"
-                                                href="#top-recruiter"
-                                                aria-expanded="true"
-                                                aria-controls="collapseOne1"
-                                            >
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false">
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Recruiter</h5></div>
+                                    <div class="card-header" role="tab" id="headingFour4">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-recruiter"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
                                                 <span id="top-recruiter-minus">
                                                     <i class="mdi mdi-minus"></i>
                                                 </span>
-                                            </a>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div
-                                    id="top-recruiter"
-                                    class="collapse show"
-                                    role="tabpanel"
-                                    aria-labelledby="headingFour4"
-                                    data-parent="#accordionEx"
-                                >
-                                    <ul class="days">
-                                        <li>Yesterday</li>
+                            </div>
+                            <div
+                                id="top-recruiter"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingFour4"
+                                data-parent="#accordionEx"
+                            >
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups recruiter-lineup">
+                                    <ul>
                                         <li>
-                                            <button>Today</button>
-                                        </li>
-                                        <li>Tomorrow</li>
-                                    </ul>
-                                    <div class="lineups recruiter-lineup">
-                                        <ul>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Raghu</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>36</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Raghu</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>336&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Hemanth Patil</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img src="/img/default_profile_image.png" class="rounded-circle" alt="user image">
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>14</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Hemanth Patil</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>180&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Akang Ekaette Helen</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Akang Ekaette Helen</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>666&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Hemanth Patil</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>11</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #03a678">
+                                                    <div class="user">
+                                                        <h6>Hemanth Patil</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-up"></i>900&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="user-info">
-                                                        <div class="mr-1">
-                                                            <img
-                                                                src="/img/default_profile_image.png"
-                                                                class="rounded-circle"
-                                                                alt="user image"
-                                                            />
-                                                        </div>
-                                                        <div class="user">
-                                                            <h6>Shaira Maae G.Yunque</h6>
-                                                            <small>India. Mumbai</small>
-                                                        </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="user-info">
+                                                    <div class="mr-1">
+                                                        <img
+                                                            src="/img/default_profile_image.png"
+                                                            class="rounded-circle"
+                                                            alt="user image"
+                                                        />
                                                     </div>
-                                                    <div>
-                                                        <div class="numbers">
-                                                            <h6>9</h6>
-                                                        </div>
-                                                        <div class="d-flex">
-                                                            <span class="text-succes" style="color: #e3342f">
+                                                    <div class="user">
+                                                        <h6>Shaira Maae G.Yunque</h6>
+                                                        <small>India. Mumbai</small>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
                                                                 <i class="mdi mdi-arrow-down"></i>106&percnt;
                                                             </span>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Companies</h5></div>
+                                    <div class="card-header" role="tab" id="headingTwo2">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-companies"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
+                                                <span id="top-companies-minus">
+                                                    <i class="mdi mdi-minus"></i>
+                                                </span>
+                                        </a>
                                     </div>
+                                </div>
+                            </div>
+                            <div
+                                id="top-companies"
+                                class="collapse show company-lineup"
+                                role="tabpanel"
+                                aria-labelledby="headingTwo2"
+                                data-parent="#accordionEx"
+                            >
+                                <ul class="days ">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups company-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="company-list d-flex justify-content-between">
+                                                <div class="card-list">
+                                                    <h6>Tele-performance</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>FIS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>WNS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Genpact</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Accenture</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
+                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion md-accordion card-groups card-group2"
+                            id="accordionEx"
+                            role="tablist"
+                            aria-multiselectable="false"
+                        >
+                            <div class="lineup top-company-info">
+                                <div class="d-flex justify-content-between">
+                                    <div><h5>Top Company Site</h5></div>
+                                    <div class="card-header" role="tab" id="headingThree3">
+                                        <a
+                                            data-toggle="collapse"
+                                            data-parent="#accordionEx"
+                                            href="#top-company-site"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne1"
+                                        >
+                                                <span id="top-company-site-minus">
+                                                    <i class="mdi mdi-minus"></i>
+                                                </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div
+                                id="top-company-site"
+                                class="collapse show"
+                                role="tabpanel"
+                                aria-labelledby="headingThree3"
+                                data-parent="#accordionEx1"
+                            >
+                                <ul class="days">
+                                    <li>Yesterday</li>
+                                    <li>
+                                        <button>Today</button>
+                                    </li>
+                                    <li>Tomorrow</li>
+                                </ul>
+                                <div class="lineups company-lineup">
+                                    <ul>
+                                        <li>
+                                            <div class="company-list d-flex justify-content-between">
+                                                <div class="card-list">
+                                                    <h6>Tele-performance</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>36</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>336&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>FIS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>14</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>180&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>WNS</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>666&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Genpact</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>11</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #4DBA87">
+                                                                <i class="mdi mdi-arrow-up"></i>900&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="company-list d-flex justify-content-between"
+                                            >
+                                                <div class="card-list">
+                                                    <h6>Accenture</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="numbers">
+                                                        <h6>9</h6>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                            <span  style="color: #ED4C4C">
+                                                                <i class="mdi mdi-arrow-down"></i>106&percnt;
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

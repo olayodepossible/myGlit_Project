@@ -1,7 +1,7 @@
 
 <style>
 
-    .btnDiv a{
+    #btnDiv a{
         display: inline-block;
         background-color: #43CF92;
         padding: 15px 50px 15px 50px;
@@ -13,7 +13,7 @@
 
     /* Meduim Screen*/
     @media screen and (min-width: 600px) and (max-width:768px) {
-        .btnDiv a{
+        #btnDiv a{
             display: inline-block;
             /*padding: 15px 90px 15px 90px;*/
             font-size: 18px !important;
@@ -24,18 +24,18 @@
 
     /* LARGE SCREEN */
     @media (min-width: 769px) {
-        .btnDiv a{
+        #btnDiv a{
             display: inline-block;
             padding: 15px 90px 15px 90px;
             font-size: 18px!important;
-            width: 300px !important;
+            width: 340px !important;
             margin-right: 100px;
         }
 
     }
 </style>
 
-<div class="btnDiv {{isset($btnClass) ? $btnClass : ''}}">
+<div id="btnDiv">
     <a class=" text-white" href="#"  >
         {!! isset($text) ? $text : '' !!}
 

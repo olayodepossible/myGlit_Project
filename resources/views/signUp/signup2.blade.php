@@ -16,16 +16,30 @@
             font-size: 16px;
             text-align: center;
         }
+        #signUp2 .cardWrapper p{
+            margin: 20px;
+        }
 
         #signUp2 .cards{
             margin: 40px auto 0 auto;
         }
-        #signUp2 #card-btn1{
-            margin-bottom: 20px;
+        #signUp2 .exp_img{
+            margin-top: 20px;
+        }
+        .cardComp a{
+            display: inline-block;
+            color: #FFF !important;
+            background-color: #43CF92 !important;
+            padding: 15px 50px;
+            width: 280px !important;
+            font-size: 16px !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
         }
 
+
         /* Meduim Screen*/
-        @media screen and (min-width: 600px) and (max-width:768px) {
+        @media screen and (min-width: 600px) {
             #signUp2 {
                 margin: 30% auto;
             }
@@ -38,18 +52,22 @@
             }
 
             #signUp2 .cards{
-                display: flex;
-                margin: 60px auto 0 auto
+                display: grid;
+                grid-template-columns: repeat(2, 6fr);
             }
             #signUp2 .cardWrapper{
                 text-align: center !important;
-                width: 50%;
+
             }
             #signUp2 #cardWrapper2{
-                margin-left: 50px;
+                padding-left: 50px;
             }
-            #signUp2 .card-btn{
-                margin-top: 20px;
+            #signUp2 .exp_img {
+                margin-top: 0;
+            }
+            .cardComp a{
+                font-size: 18px !important;
+
             }
         }
 
@@ -63,22 +81,32 @@
             }
 
             #signUp2 .cards{
-                display: flex;
-                margin: 60px auto 0 auto
+                display: grid;
+                grid-template-columns: repeat(2, 5fr);
             }
             #signUp2 .cardWrapper{
                 text-align: center !important;
                 width: 400px;
             }
-            #signUp2 .card2{
-                width: 230px;
-                margin: 0 20px auto;
+            #signUp2 #cardWrapper1 p{
+                width: 300px;
+                margin: 20px 50px;
             }
-            #signUp2 .card-btn{
-                margin-top: 20px;
+            #signUp2 #cardWrapper2 p{
+                width: 230px;
+                margin: 20px 50px;
+            }
+
+            #signUp2 #cardWrapper2 img{
+                margin: 0;
+            }
+            .cardComp a{
+                font-size: 18px!important;
+            }
+            .cardComp img{
+                margin-left: 25px;
             }
         }
-
     </style>
 @endsection
 
@@ -93,35 +121,26 @@
                 </div>
                 <div class="cards">
                     <div id="cardWrapper1" class="cardWrapper">
+                        <div class="cardComp">
+                            <div>
+                                <img src="{{url('/img/bag.png')}}" >
+                            </div>
+                            <p><span class="text-danger">*</span> I have just graduated / I haven't worked after graduation </p>
 
-                        <div class="card1">
-                            @component('layouts.components.card', [
-                                'text' => "I have just graduated / I haven't worked after graduation",
-                                'imgSrc'=> '/img/Vector.png'
-                        ])
-                            @endcomponent
-                        </div>
-
-                        <div id="card-btn1" class="card-btn">
-                            @component('layouts.components.button', ['text' => "I am a Fresher"])
-                            @endcomponent
+                            <a href="#" class="btnDiv" >I am a Fresher</a>
                         </div>
                     </div>
 
                     <div id="cardWrapper2" class="cardWrapper">
+                            <div class="cardComp">
+                                <div class="exp_img">
+                                    <img src="{{url('/img/portfolio.png')}}" >
+                                </div>
+                                <p><span class="text-danger">*</span> I have at least 1 month of work experience</p>
 
-                        <div class="card2">
-                            @component('layouts.components.card', [
-                                'text' => "I have at least 1 month of work experience",
-                                'imgSrc'=> '/img/portfolio.png'
-                         ])
-                            @endcomponent
-                        </div>
+                                <a href="#" class="btnDiv" >I am Experienced</a>
 
-                        <div class="card-btn">
-                            @component('layouts.components.button', ['text' => "I am Experienced"])
-                            @endcomponent
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
